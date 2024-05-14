@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title th:text="${title}"/>
+    <link rel="SHORTCUT ICON" th:href="@{/images/icon1.png(v=${vers})}">
+    <link type="text/css" rel="stylesheet" th:href="@{'/js/libs/webix/skins/'+${skin}(v=${vers})}">
+    <link type="text/css" rel="stylesheet" th:href="@{/css/zsystem.css(v=${vers})}">
+    <script th:src="@{/js/libs/webix/webix.js(v=${vers})}"></script>
+    <script th:inline="javascript">
+        var urlServer = [[${urlServer}]];
+        var skin = [[${skin}]];
+    </script>
+</head>
+<body>
+<script th:src="@{/js/functions.js(v=${vers})}"></script>
+<script th:src="@{/js/page/components/header.js(v=${vers})}"></script>
+<script th:src="@{/js/page/dialog/register.js(v=${vers})}"></script>
+</body>
+</html>

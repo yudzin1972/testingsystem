@@ -1,0 +1,19 @@
+.webix_cell:hover, .webix_list_item:hover{
+    background: #4f734f;
+    color: black;
+}
+.highlight{
+    background-color: #fb5454;
+    color: #222020;
+}
+.highlightChild{
+    color: #d47b7b;
+}
+.mdi-fullscreen:before{
+    content: "\f010";
+}
+.mdi-fullscreen-exit::before {
+    content: "\f006";
+}
+
+

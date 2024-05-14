@@ -1,0 +1,1 @@
+INSERT INTO user_id_seq VALUES (0);
