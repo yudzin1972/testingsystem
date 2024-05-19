@@ -56,9 +56,9 @@ public class TestServiceImpl implements TestService {
     }
 
     @Override
-    public TestDto getOne(Long id) throws RecordNotFountException {
+    public TestAddDto getOne(Long id) throws RecordNotFountException {
         Optional<TestEntity> testEntityOptional = testRepository.findById(id);
-        return testMapper.toDto(testEntityOptional.orElseThrow(() ->
+        return testAddMapper.toDto(testEntityOptional.orElseThrow(() ->
                 new RecordNotFountException(constants.ERROR_RECORD_NOT_FOUND_CONSTANT)));
     }
 

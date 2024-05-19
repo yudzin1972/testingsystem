@@ -125,4 +125,17 @@ public class TestRestController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+    @PreAuthorize("hasAuthority('ROLE_TEACHER') || hasAuthority('ROLE_ADMIN')")
+    @GetMapping("/test/{id}/getforadd")
+    public ResponseEntity<?> getforadd(@PathVariable Long id) {
+        try {
+            return ResponseEntity.ok(testService.getOne(id));
+        } catch (RecordNotFountException e) {
+            log.error(e.getMessage());
+            return ResponseEntity.status(404).body(e.getMessage());
+        } catch (Exception e) {
+            log.error(e.getMessage());
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
 }

@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface TestService {
     TestRunDto create(TestAddDto testAddDto) throws RecordAddException;
-    TestDto getOne(Long id) throws RecordNotFountException;
+    TestAddDto getOne(Long id) throws RecordNotFountException;
     TestStartDto getOneStart(Long id) throws RecordNotFountException;
     void setDeleteStatusTest(Long id)  throws RecordNotFountException;
     NextQuestion getNextQuestion(Long id) throws RecordNotFountException;

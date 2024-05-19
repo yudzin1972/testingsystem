@@ -7,7 +7,7 @@ webix.ready(function () {
         id: "textLogin",
         value: '',
         label: "Логин",
-        placeholder: "email"
+        placeholder: "login"
     },
         {
             view: "text",

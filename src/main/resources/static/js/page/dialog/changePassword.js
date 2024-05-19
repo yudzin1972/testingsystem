@@ -11,7 +11,7 @@ webix.ready(function () {
             value: (userS) ? userS.username : "",
             label: "Логин",
             disabled: true,
-            placeholder: "email"
+            placeholder: "login"
         },
         {
             view: "text",

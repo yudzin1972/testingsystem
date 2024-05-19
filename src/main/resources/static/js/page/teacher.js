@@ -241,8 +241,18 @@ webix.ready(function () {
                                                                     width: 60,
                                                                     webix_kids: true
                                                                 },
-                                                                {id: "username", header: "User", fillspace: true},
-                                                                {id: "fio", header: "fio", fillspace: true}
+                                                                {
+                                                                    id: "username",
+                                                                    header: ["UserName", {content: "textFilter"}],
+                                                                    sort: "text",
+                                                                    fillspace: true
+                                                                },
+                                                                {
+                                                                    id: "fio",
+                                                                    header: ["fio", {content: "textFilter"}],
+                                                                    sort: "text",
+                                                                    fillspace: true
+                                                                }
                                                             ],
                                                             url: urlServer + "/user/teacherall",
                                                             pager: "pager1",
@@ -307,7 +317,7 @@ webix.ready(function () {
                                                                                 //by: header.column
                                                                             }
                                                                         );
-                                                                    }else{
+                                                                    } else {
                                                                         //$$("teacherTable2").ungroup()
                                                                     }
                                                                 }
